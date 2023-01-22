@@ -127,26 +127,12 @@ else:
     REQUIRES = NUMPY_REQUIREMENT if "bdist_wheel" in sys.argv[1:] else []
 
 setup(
-    name=ABOUT["__title__"],
-    version=ABOUT["__version__"],
-    description=ABOUT["__description__"],
     long_description=README,
-    long_description_content_type="text/x-rst",
-    author=ABOUT["__author__"],
-    author_email=ABOUT["__author_email__"],
-    url=ABOUT["__url__"],
-    license=ABOUT["__license__"],
-    packages=["pyemd"],
+    license=ABOUT['__license__'],
+    packages=['pyemd'],
     install_requires=REQUIRES,
     cmdclass=CMDCLASS,
     setup_requires=REQUIRES,
     ext_modules=EXT_MODULES,
-    classifiers=[
-        "Development Status :: 3 - Alpha",
-        "Intended Audience :: Developers",
-        "Natural Language :: English",
-        "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 3",
     ],
 )
